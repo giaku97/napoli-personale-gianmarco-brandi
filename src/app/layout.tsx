@@ -6,6 +6,7 @@ import './photography.css';
 import { SiteProvider } from '@/components/site-content';
 import site from '@/content/site.json';
 import type { CSSProperties } from 'react';
+import { publicPath } from '@/lib/base-path';
 
 const display = localFont({ src: [
   { path: '../fonts/barlow-700.woff2', weight: '700' },
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   title: `Napoli è personale — ${site.identity.name}`,
   description: 'One Club. Millions of Ways to Live It. Una proposta indipendente di digital marketing e fan experience per SSC Napoli, di Gianmarco Brandi.',
   robots: { index: false, follow: false },
-  icons: { icon: '/icon.svg' },
+  icons: { icon: publicPath('/icon.svg') },
 };
 export const viewport: Viewport = { themeColor: '#0879f9', width: 'device-width', initialScale: 1 };
 

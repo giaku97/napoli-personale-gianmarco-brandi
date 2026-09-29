@@ -5,13 +5,14 @@ import defaults from '@/content/site.json';
 import originalTexts from '@/content/original-texts.json';
 import italian from '@/content/locales/it.json';
 import english from '@/content/locales/en.json';
+import { publicPath } from '@/lib/base-path';
 
 export type PhotoData = { src: string; alt: string; author: string; license: string; licenseUrl: string; source: string; position: number; visible: boolean };
 export type Project = { id: string; title: string; role: string; year: string; description: string; image: string; alt: string; source: string; credits: string; verified: boolean };
 export type SiteData = Omit<typeof defaults, 'identity' | 'photos' | 'texts' | 'translations'> & { texts: Record<string,string>; translations: Record<string,string>; photos: Record<string,PhotoData>; identity: { name: string; logo: string; email: string; cv: string; portfolioUrl: string; projects: Project[] } };
 export const defaultSite = defaults as SiteData;
-export function safeLink(value: string) { return /^https:\/\/[^\s]+$/i.test(value) || /^\/assets\/[a-z0-9_./-]+$/i.test(value) ? value : ''; }
-export function safeImage(value: string) { return /^\/assets\/[a-z0-9_./-]+$/i.test(value) || /^data:image\/(png|jpeg|webp|gif);base64,[a-z0-9+/=]+$/i.test(value) ? value : ''; }
+export function safeLink(value: string) { return /^https:\/\/[^\s]+$/i.test(value) ? value : /^\/assets\/[a-z0-9_./-]+$/i.test(value) ? publicPath(value) : ''; }
+export function safeImage(value: string) { return /^\/assets\/[a-z0-9_./-]+$/i.test(value) ? publicPath(value) : /^data:image\/(png|jpeg|webp|gif);base64,[a-z0-9+/=]+$/i.test(value) ? value : ''; }
 export function validateSite(input: unknown): SiteData {
   if (!input || typeof input !== 'object') throw new Error('Il file non contiene un progetto valido.');
   const s = input as SiteData;

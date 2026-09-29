@@ -15,6 +15,12 @@ node scripts/serve.mjs
 
 The production preview is `http://127.0.0.1:4173`. In a second terminal run `pnpm qa`; results and four full-page screenshots are written to `../qa`. `pnpm check:release` checks asset integrity and intentionally reports missing personal materials. The static export is `out/`.
 
+## GitHub Pages
+
+The workflow in `.github/workflows/pages.yml` builds and deploys `out/` on every push to `main`. In the repository's **Settings → Pages**, select **GitHub Actions** as the build and deployment source. The site URL is `https://giaku97.github.io/napoli-personale-gianmarco-brandi/`. The workflow sets `NEXT_PUBLIC_BASE_PATH` so Next.js routes and public assets work under the repository path. Local builds omit that variable and still run at `/`.
+
+GitHub Pages makes the deployed site publicly accessible. The site currently sets `robots: noindex`, so search engines are asked not to index it. `pnpm check:release` still reports missing personal works, CV and contact details; review those before treating the site as a finished application portfolio.
+
 ## Edit
 
 Open `/studio/` for Italian/English copy, photography, theme, work records and public contacts. The editor saves drafts locally in IndexedDB. Export the project JSON and apply it to `src/content/site.json` before rebuilding and publishing. The public site does not link to Studio. Verified work appears only when `portfolioEnabled` is true and the record has a real image, alt, title, role and description.
@@ -30,4 +36,4 @@ The public demo stores name, choices, captions and optional user image only in p
 - `ROLE_COVERAGE_MATRIX.md`: internal role coverage, with unproven experience explicitly marked
 - `FINAL_CRITIQUE.md` and `FINAL_IMPROVEMENT_PLAN.md`: quality assessment and remaining editorial inputs
 
-The original Gianmarco logo is unchanged. Personal works, CV and public contact have not been supplied, so this deployment remains an owner-private review artifact. Do not turn it into a public application link without completing those inputs and checking access.
+The original Gianmarco logo is unchanged. Personal works, CV and public contact have not been supplied.
