@@ -1,0 +1,8 @@
+{
+  "exposure": 100000,
+  "scenarios": [
+    {"id":"conservative","card":10,"cardShare":20,"moment":15,"optIn":30,"wrappedOpen":35,"wrappedShare":15},
+    {"id":"target","card":20,"cardShare":30,"moment":30,"optIn":40,"wrappedOpen":50,"wrappedShare":25},
+    {"id":"stretch","card":30,"cardShare":45,"moment":45,"optIn":50,"wrappedOpen":65,"wrappedShare":35}
+  ]
+}

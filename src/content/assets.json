@@ -1,0 +1,140 @@
+{
+  "inventoryDate": "2026-09-22",
+  "originals": [
+    {
+      "id": "personal-logo",
+      "path": "public/assets/gianmarco-brandi-original.png",
+      "sha256": "0DD42F2C152BD913EFC21E2524223268EAE0D6853F8E25A61FCEB4588AB339C4",
+      "width": 3870,
+      "height": 1943,
+      "source": "User supplied original PNG",
+      "transformation": "none; proportional display only"
+    }
+  ],
+  "missing": [
+    "portfolio-projects",
+    "verified-project-credits",
+    "cv",
+    "public-contact"
+  ],
+  "policy": "Never invent personal assets or claims. Integrate originals unchanged and record SHA-256.",
+  "photographs": [
+    {
+      "id": "stadio",
+      "author": "Gaetano Capaldo",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Stadio_Maradona_Serie_A.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "originalSha256": "c1664f86e093349981b0fa8ee6abbcba0941266aeb15ac6d4f8ed244536dc873",
+      "transformation": "responsive resize, AVIF/WebP conversion, mobile crop; layout overlays",
+      "derivatives": [
+        {
+          "path": "public/assets/photos/stadio-1280.avif",
+          "sha256": "35edaee92449deca5d2cf26da598594aad8d59cf25db7aa1567167e56ebb688a"
+        },
+        {
+          "path": "public/assets/photos/stadio-1280.webp",
+          "sha256": "c4f364e3ef34f9147346ca8049077d3a1deaceb9d0273c7bbd14679dc0eb5522"
+        },
+        {
+          "path": "public/assets/photos/stadio-1920.avif",
+          "sha256": "269d2b928788f67fabd8f8ab1f22bbcdbe75eeb030ad7467f7b228c2a059bc14"
+        },
+        {
+          "path": "public/assets/photos/stadio-1920.webp",
+          "sha256": "a599a9d9e32dbb14d2f4276dad2b860c018e4d3dd51fd16ae94a6c9d286b7744"
+        },
+        {
+          "path": "public/assets/photos/stadio-640.avif",
+          "sha256": "43504da0a49ab58d20aa7514889ae706c006fd67e09f6d63893441a14969d46d"
+        },
+        {
+          "path": "public/assets/photos/stadio-640.webp",
+          "sha256": "bf7b8b7bf8b924f87b6a313f326579b4f59881d175b4c057c451d3c9e132ca9d"
+        },
+        {
+          "path": "public/assets/photos/stadio-portrait.avif",
+          "sha256": "ab4b5a5693da31fed112357c0636a01645f2155470b9652cbc38e7e0ad127542"
+        }
+      ]
+    },
+    {
+      "id": "strada",
+      "author": "Philip Mallis",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pedestrian_street_with_F.C._Napoli_flags_and_signs_in_Naples,_Italy_(53573156780).jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "originalSha256": "57dc99cb29351e49fdd5599ba990c2342786169b10933458b2a3ad3b33b72b7f",
+      "transformation": "responsive resize, AVIF/WebP conversion, mobile crop; layout overlays",
+      "derivatives": [
+        {
+          "path": "public/assets/photos/strada-1280.avif",
+          "sha256": "cd06b278bd1b78b96ec69586a79e9a67b21eb573a3e2255ded24012ce6735541"
+        },
+        {
+          "path": "public/assets/photos/strada-1280.webp",
+          "sha256": "c69065e72597b4c6ec1ba572c0d3f069a8af5f42650ceb8bd06fe79cf6297fc6"
+        },
+        {
+          "path": "public/assets/photos/strada-1920.avif",
+          "sha256": "107225e629a482e2d848ba88b184481324e0a1b5776d6810edc8d04e45b5e927"
+        },
+        {
+          "path": "public/assets/photos/strada-1920.webp",
+          "sha256": "6feb108d4f34d18347cbb12d7307dd214685561cfb173508d6d7ccd9256d4873"
+        },
+        {
+          "path": "public/assets/photos/strada-640.avif",
+          "sha256": "3a5104f2101f42d0c01b2b1ef029c6e4e957075b0c9805ca46d5574f8921d848"
+        },
+        {
+          "path": "public/assets/photos/strada-640.webp",
+          "sha256": "f439a691c672b077cba43c551e60fe46f0f60794c93a6fab8da67a28ca09c20c"
+        },
+        {
+          "path": "public/assets/photos/strada-portrait.avif",
+          "sha256": "5278138a65e46683fb018ecd87217b8e35769e270b7f8e78e455e25178655f5d"
+        }
+      ]
+    },
+    {
+      "id": "squadra",
+      "author": "Alexdevil",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Napoli-Venezia220821.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalSha256": "e05bfb193e3684909b9fd250565b68f4c2df793a634f54612da18535123d6b3e",
+      "transformation": "responsive resize, AVIF/WebP conversion, mobile crop; layout overlays",
+      "derivatives": [
+        {
+          "path": "public/assets/photos/squadra-1280.avif",
+          "sha256": "82dc6fc1d406d46d5be1bc9d715daddda963101985c3ea42f5a0ade60c632e53"
+        },
+        {
+          "path": "public/assets/photos/squadra-1280.webp",
+          "sha256": "5040f7e0ab92fc83dcea2b03fe7e9ef71fc57fb5e7db7625616c6e802f208ee2"
+        },
+        {
+          "path": "public/assets/photos/squadra-1920.avif",
+          "sha256": "cec9de1136c6d75003cc136b60f524d1790a6cb082e8b13695dafe942417e5e4"
+        },
+        {
+          "path": "public/assets/photos/squadra-1920.webp",
+          "sha256": "8870a158c524468ed7dac58996fd3abbf9ef17e826cfdfb91acbb3f3e054f653"
+        },
+        {
+          "path": "public/assets/photos/squadra-640.avif",
+          "sha256": "29b4ebd17043c58e2e6c3a1f18d1b53cb4648bf2cdd13a869703b17db1df0ed9"
+        },
+        {
+          "path": "public/assets/photos/squadra-640.webp",
+          "sha256": "0e85aef79ecadaee91dd21a594dfe93c854c0e4e3d340059e1b86b3a468720a9"
+        },
+        {
+          "path": "public/assets/photos/squadra-portrait.avif",
+          "sha256": "dbb1ffcd0051357b26598600033d56f8748780a38216486b7c4ad05cfd016a5c"
+        }
+      ]
+    }
+  ]
+}
