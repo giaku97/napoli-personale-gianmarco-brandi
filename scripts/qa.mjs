@@ -27,7 +27,7 @@ try {
   assert.ok((await page.locator('.np-card-facts').innerText()).includes('MONDO'));
   await page.getByLabel('COME VUOI CHIAMARE LA TUA CARD?').fill('Gianmarco <test>');
   assert.ok((await page.locator('.np-card-identity').textContent()).includes('Gianmarco <test>'));
-  for(const [index,slot] of ['match','hero','hero-mondo'].entries()){
+  for(const [index,slot] of ['now-prima','now-durante','now-dopo'].entries()){
     await page.locator('.np-segment button').nth(index).click();
     await page.waitForFunction(expected=>{const photos=document.querySelectorAll('.np-now-image figure[data-photo]');return photos.length===1&&photos[0].getAttribute('data-photo')===expected;},slot);
     assert.ok(await page.locator('.np-now-image img').evaluate(img=>img.complete&&img.naturalWidth>0));

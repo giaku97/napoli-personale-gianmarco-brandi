@@ -225,3 +225,25 @@ Autore, licenza e luogo delle nuove fotografie non sono documentati nei file. So
 | public/assets/portfolio/pops-funko.webp | 72908 B | 7c75c363999af9f64030d0333c352ae74b01fe91d02d2ca2aa4b06b048f2c707 |
 | public/assets/portfolio/pops-halloween-poster-800.webp | 59220 B | 90e378d2641157bf74570e938c0c090a498ff94329dac2ac10cd4881742bbd45 |
 | public/assets/portfolio/pops-halloween-poster.webp | 234004 B | c62759051bdda71ca5c2161f85afe25f553fad0af1e42365b451c3afa5fad419 |
+
+## Foto per NOW — 1 ottobre 2026
+
+Tre originali forniti in `Desktop/nuove foto`, copiati senza alterazioni. Prima: riscaldamento; Durante: azione di gioco; Dopo: festa dei giocatori. Derivati WebP/AVIF ridimensionati senza ritaglio; autore e diritti da confermare.
+
+| File | Byte | SHA-256 |
+|---|---:|---|
+| public/assets/photos/now-prima-original.jpg | 376124 | c05ed12a53797b06e9f98548429c7efc46e5133aa05b0ad0cea1012d8ed47bcf |
+| public/assets/photos/now-prima-full.webp | 79070 | 0a14045b4895144dc9efa7090aca47fd2d92ab282b01467d8df141385fa785a9 |
+| public/assets/photos/now-prima-full.avif | 27534 | 5b42e1fd02f1655695cd903025bf2faaeac1b7db191a556b59d2aa6baef7b653 |
+| public/assets/photos/now-prima-640.webp | 41664 | 52f64aa2069cd9cb4e619ad4a717c31063e040967f48e240ca5c715a6f55b438 |
+| public/assets/photos/now-prima-640.avif | 15617 | 3cbb97f0e8243d43e9c565f2d97ddfc49971bac37447459f687e090d9e7213df |
+| public/assets/photos/now-durante-original.jpg | 38483 | 86f46e96a6bb9b7812a2242eb55b8bee4e74d1ee9ae88b68d7f9b952484f7601 |
+| public/assets/photos/now-durante-full.webp | 33966 | 952ebec5749201f1cc187e34b35cf26d826904a7cb6e0a95353ba5eb69ce771a |
+| public/assets/photos/now-durante-full.avif | 14006 | f7aa7f2009c35209242036399d2d8b48318a64239a183f42156eef32d37a0c41 |
+| public/assets/photos/now-durante-480.webp | 28196 | dc92d15fb8955eb1d7210e9054b390e9aca62b3d75e24cbd1ec0067972b71ed5 |
+| public/assets/photos/now-durante-480.avif | 11611 | 81a03b5b3f4886132d4677f2a70cfd020d2072769228c5fba469d32aabc1f393 |
+| public/assets/photos/now-dopo-original.avif | 132706 | 645014a74221efbfccca5a2cb930bbbd5aaa5fffe04f0495dc1f30ccaa654b0a |
+| public/assets/photos/now-dopo-full.webp | 123718 | 46b755cb02a1749ce3e7df8883d9abdeabca3adf287bcfaafa811e94039eabee |
+| public/assets/photos/now-dopo-full.avif | 42718 | bd10ec2be147f337735f3bad51982bfc93ab27e8e69609552f7ebdf8e1dd12b7 |
+| public/assets/photos/now-dopo-640.webp | 36316 | 188829ae355b314c6a786998c9560447e71cfd065ec8eedb68da877f0c737122 |
+| public/assets/photos/now-dopo-640.avif | 15025 | e2dac1f5e7f37eaa02c166456f86db7c774666736762fc73e2ddcf5a17f3076c |

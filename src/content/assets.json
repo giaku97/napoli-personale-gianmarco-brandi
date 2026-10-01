@@ -43,6 +43,33 @@
       "sha256": "C6BCC7C75F78AC3EEE93E5167BA4CFF0BC28628014D73C4F39B14D3B492AD176",
       "source": "User supplied original from Desktop/nuove foto",
       "transformation": "none; preserved copy"
+    },
+    {
+      "id": "now-prima",
+      "path": "public/assets/photos/now-prima-original.jpg",
+      "sha256": "C05ED12A53797B06E9F98548429C7EFC46E5133AA05B0AD0CEA1012D8ED47BCF",
+      "width": 1000,
+      "height": 664,
+      "source": "User supplied original from Desktop/nuove foto",
+      "transformation": "none; preserved copy"
+    },
+    {
+      "id": "now-durante",
+      "path": "public/assets/photos/now-durante-original.jpg",
+      "sha256": "86F46E96A6BB9B7812A2242EB55B8BEE4E74D1EE9AE88B68D7F9B952484F7601",
+      "width": 550,
+      "height": 362,
+      "source": "User supplied original from Desktop/nuove foto",
+      "transformation": "none; preserved copy"
+    },
+    {
+      "id": "now-dopo",
+      "path": "public/assets/photos/now-dopo-original.avif",
+      "sha256": "645014A74221EFBFCCCA5A2CB930BBBD5AAA5FFFE04F0495DC1F30CCAA654B0A",
+      "width": 3072,
+      "height": 2049,
+      "source": "User supplied original from Desktop/nuove foto",
+      "transformation": "none; preserved copy"
     }
   ],
   "missing": [
@@ -260,6 +287,87 @@
         {
           "path": "public/assets/photos/hero-mondo-portrait.avif",
           "sha256": "b7bacc7949ccc3f3612eb0ccf68cc79347025743c345b39567e0ebc06e31592e"
+        }
+      ]
+    },
+    {
+      "id": "now-prima",
+      "author": "Autore non indicato · file fornito da Gianmarco Brandi",
+      "license": "Titolarità da confermare",
+      "source": "",
+      "licenseUrl": "",
+      "originalSha256": "c05ed12a53797b06e9f98548429c7efc46e5133aa05b0ad0cea1012d8ed47bcf",
+      "transformation": "responsive resize and AVIF/WebP conversion; no crop",
+      "derivatives": [
+        {
+          "path": "public/assets/photos/now-prima-640.avif",
+          "sha256": "3cbb97f0e8243d43e9c565f2d97ddfc49971bac37447459f687e090d9e7213df"
+        },
+        {
+          "path": "public/assets/photos/now-prima-640.webp",
+          "sha256": "52f64aa2069cd9cb4e619ad4a717c31063e040967f48e240ca5c715a6f55b438"
+        },
+        {
+          "path": "public/assets/photos/now-prima-full.avif",
+          "sha256": "5b42e1fd02f1655695cd903025bf2faaeac1b7db191a556b59d2aa6baef7b653"
+        },
+        {
+          "path": "public/assets/photos/now-prima-full.webp",
+          "sha256": "0a14045b4895144dc9efa7090aca47fd2d92ab282b01467d8df141385fa785a9"
+        }
+      ]
+    },
+    {
+      "id": "now-durante",
+      "author": "Autore non indicato · file fornito da Gianmarco Brandi",
+      "license": "Titolarità da confermare",
+      "source": "",
+      "licenseUrl": "",
+      "originalSha256": "86f46e96a6bb9b7812a2242eb55b8bee4e74d1ee9ae88b68d7f9b952484f7601",
+      "transformation": "responsive resize and AVIF/WebP conversion; no crop",
+      "derivatives": [
+        {
+          "path": "public/assets/photos/now-durante-480.avif",
+          "sha256": "81a03b5b3f4886132d4677f2a70cfd020d2072769228c5fba469d32aabc1f393"
+        },
+        {
+          "path": "public/assets/photos/now-durante-480.webp",
+          "sha256": "dc92d15fb8955eb1d7210e9054b390e9aca62b3d75e24cbd1ec0067972b71ed5"
+        },
+        {
+          "path": "public/assets/photos/now-durante-full.avif",
+          "sha256": "f7aa7f2009c35209242036399d2d8b48318a64239a183f42156eef32d37a0c41"
+        },
+        {
+          "path": "public/assets/photos/now-durante-full.webp",
+          "sha256": "952ebec5749201f1cc187e34b35cf26d826904a7cb6e0a95353ba5eb69ce771a"
+        }
+      ]
+    },
+    {
+      "id": "now-dopo",
+      "author": "Autore non indicato · file fornito da Gianmarco Brandi",
+      "license": "Titolarità da confermare",
+      "source": "",
+      "licenseUrl": "",
+      "originalSha256": "645014a74221efbfccca5a2cb930bbbd5aaa5fffe04f0495dc1f30ccaa654b0a",
+      "transformation": "responsive resize and AVIF/WebP conversion; no crop",
+      "derivatives": [
+        {
+          "path": "public/assets/photos/now-dopo-640.avif",
+          "sha256": "e2dac1f5e7f37eaa02c166456f86db7c774666736762fc73e2ddcf5a17f3076c"
+        },
+        {
+          "path": "public/assets/photos/now-dopo-640.webp",
+          "sha256": "188829ae355b314c6a786998c9560447e71cfd065ec8eedb68da877f0c737122"
+        },
+        {
+          "path": "public/assets/photos/now-dopo-full.avif",
+          "sha256": "bd10ec2be147f337735f3bad51982bfc93ab27e8e69609552f7ebdf8e1dd12b7"
+        },
+        {
+          "path": "public/assets/photos/now-dopo-full.webp",
+          "sha256": "46b755cb02a1749ce3e7df8883d9abdeabca3adf287bcfaafa811e94039eabee"
         }
       ]
     }

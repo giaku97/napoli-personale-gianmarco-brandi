@@ -11,7 +11,7 @@ import './napoli-experience.css';
 // TODO: Confirm the photographers and geographic context of the Italy/World photos before making location claims.
 // TODO: Add a verified CV link when Gianmarco supplies an approved file.
 const heroPhotoSlots=['hero','hero-napoli','hero-italia','hero-mondo'];
-const nowPhotoSlots=['match','hero','hero-mondo'];
+const nowPhotoSlots=['now-prima','now-durante','now-dopo'];
 type Moment = { id: string; place: number; caption: string; image: string; proposed: boolean };
 type RateKey = 'card' | 'cardShare' | 'moment' | 'optIn' | 'wrappedOpen' | 'wrappedShare';
 type Rates = Record<RateKey,number>;

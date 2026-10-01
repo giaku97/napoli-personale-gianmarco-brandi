@@ -890,7 +890,7 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "position": 50,
-      "visible": true
+      "visible": false
     },
     "hero-napoli": {
       "src": "/assets/photos/hero-napoli-full.webp",
@@ -920,6 +920,39 @@
       "altEn": "A Napoli supporter celebrates among fellow fans",
       "author": "Autore non indicato · file fornito da Gianmarco Brandi",
       "license": "Titolarità e luogo da confermare",
+      "licenseUrl": "",
+      "source": "",
+      "position": 50,
+      "visible": true
+    },
+    "now-prima": {
+      "src": "/assets/photos/now-prima-full.webp",
+      "alt": "Giocatori del Napoli si riscaldano sul campo prima della partita",
+      "altEn": "Napoli players warm up on the pitch before a match",
+      "author": "Autore non indicato · file fornito da Gianmarco Brandi",
+      "license": "Titolarità da confermare",
+      "licenseUrl": "",
+      "source": "",
+      "position": 50,
+      "visible": true
+    },
+    "now-durante": {
+      "src": "/assets/photos/now-durante-full.webp",
+      "alt": "Un giocatore del Napoli in azione durante una partita",
+      "altEn": "A Napoli player in action during a match",
+      "author": "Autore non indicato · file fornito da Gianmarco Brandi",
+      "license": "Titolarità da confermare",
+      "licenseUrl": "",
+      "source": "",
+      "position": 50,
+      "visible": true
+    },
+    "now-dopo": {
+      "src": "/assets/photos/now-dopo-full.webp",
+      "alt": "I giocatori del Napoli festeggiano insieme allo stadio Maradona",
+      "altEn": "Napoli players celebrate together at the Maradona stadium",
+      "author": "Autore non indicato · file fornito da Gianmarco Brandi",
+      "license": "Titolarità da confermare",
       "licenseUrl": "",
       "source": "",
       "position": 50,

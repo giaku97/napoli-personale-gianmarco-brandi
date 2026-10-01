@@ -9,7 +9,7 @@ import groups from '@/content/text-groups.json';
 import './studio.css';
 
 const sectionNames: Record<string,string>={nav:'Navigazione',hero:'Apertura',idea:'Big idea',now:'NOW',card:'My Napoli',together:'TOGETHER',yours:'YOURS',loop:'Product loop',strategy:'Strategia',days:'90 giorni',person:'Gianmarco',legal:'Note'};
-const photoNames: Record<string,string>={hero:'Apertura', 'story-city':'Racconto / città','story-stadium':'Racconto / stadio','scenario-stadium':'Scenario Napoli','scenario-city':'Scenari dal mondo',card:'My Napoli / card',recap:'Napoli Recap',culture:'City & Culture',match:'Match Mode'};
+const photoNames: Record<string,string>={hero:'Apertura', 'story-city':'Racconto / città','story-stadium':'Racconto / stadio','scenario-stadium':'Scenario Napoli','scenario-city':'Scenari dal mondo',card:'My Napoli / card',recap:'Napoli Recap',culture:'City & Culture',match:'Match Mode','now-prima':'NOW / Prima','now-durante':'NOW / Durante','now-dopo':'NOW / Dopo'};
 type Tab='Testi'|'Immagini'|'Brand'|'Lavori'|'Contatti';
 function database(): Promise<IDBDatabase> { return new Promise((resolve,reject)=>{const request=indexedDB.open('napoli-personale-studio',1);request.onupgradeneeded=()=>request.result.createObjectStore('drafts');request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);}); }
 async function readDraft() { const db=await database();try{return await new Promise<SiteData|undefined>((resolve,reject)=>{const request=db.transaction('drafts').objectStore('drafts').get('current');request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);});}finally{db.close();} }

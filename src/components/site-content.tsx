@@ -27,7 +27,7 @@ export function validateSite(input: unknown): SiteData {
   if (!string(s.identity.name,120) || !string(s.identity.email,200) || (s.identity.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.identity.email)) || !safeImage(s.identity.logo)) throw new Error('Controlla nome, email e logo.');
   if ([s.identity.cv,s.identity.portfolioUrl].some(v=>typeof v !== 'string' || (v && !safeLink(v)))) throw new Error('Usa un indirizzo HTTPS valido per CV e portfolio.');
   for (const key of Object.keys(defaultSite.photos)) {
-    const p=s.photos[key];
+    const p=s.photos[key] || (key.startsWith('now-') ? defaultSite.photos[key] : undefined);
     if (!p || !safeImage(p.src) || !string(p.alt,500) || (p.altEn!==undefined && !string(p.altEn,500)) || !string(p.author,200) || !string(p.license,200) || !Number.isFinite(p.position) || p.position < 0 || p.position > 100 || typeof p.visible !== 'boolean' || [p.source,p.licenseUrl].some(v=>typeof v !== 'string'||(v&&!safeLink(v)))) throw new Error('Controlla immagine, crediti e posizione delle fotografie.');
   }
   if (s.identity.projects.length > 30) throw new Error('Puoi inserire fino a 30 progetti.');
@@ -40,7 +40,7 @@ export function validateSite(input: unknown): SiteData {
       for (const m of p.media) if (!m || !['image','video'].includes(m.type) || !string(m.src,1000) || (m.small!==undefined && (!string(m.small,1000) || (m.small && !safeImage(m.small)))) || [m.width,m.height,m.smallWidth].some(v=>v!==undefined && (!Number.isFinite(v) || v<1 || v>10000)) || !string(m.alt,500) || !string(m.caption,500) || !string(m.credits,1000) || !string(m.poster,1000) || (m.altEn!==undefined && !string(m.altEn,500)) || (m.captionEn!==undefined && !string(m.captionEn,500)) || (m.type==='image' ? !safeImage(m.src) : !safeVideo(m.src)) || (m.poster && !safeImage(m.poster))) throw new Error('Controlla immagini e video del lavoro.');
     }
   }
-  return structuredClone({ ...defaultSite, ...s, texts: { ...defaultSite.texts, ...s.texts }, translations: { ...defaultSite.translations, ...s.translations } });
+  return structuredClone({ ...defaultSite, ...s, texts: { ...defaultSite.texts, ...s.texts }, translations: { ...defaultSite.translations, ...s.translations }, photos: { ...defaultSite.photos, ...s.photos } });
 }
 
 type Locale = 'it' | 'en';
@@ -80,18 +80,19 @@ export function Copy({id,children}:{id:string;children:ReactNode}) {
   if (value === 'Gianmarco Brandi') return <>{data.identity.name}</>;
   return <span className="editable-copy" data-copy={id}>{value !== undefined && value !== (originalTexts as Record<string,string>)[id] ? value : children}</span>;
 }
-const newPhotoSizes: Record<string,{width:number;height:number}> = { 'hero-napoli':{width:892,height:670}, 'hero-italia':{width:1024,height:683}, 'hero-mondo':{width:900,height:600} };
+const newPhotoSizes: Record<string,{width:number;height:number;smallWidth?:number}> = { 'hero-napoli':{width:892,height:670}, 'hero-italia':{width:1024,height:683}, 'hero-mondo':{width:900,height:600}, 'now-prima':{width:1000,height:664}, 'now-durante':{width:550,height:362,smallWidth:480}, 'now-dopo':{width:1600,height:1068} };
 export function Photo({slot,className='',priority=false}:{slot:string;className?:string;priority?:boolean}) {
   const {data,locale}=useSite();const photo=data.photos[slot];
   if (!photo?.visible) return null;
   const src=safeImage(photo.src);
   const legacy=/\/assets\/photos\/.+-1920.webp$/.test(src);
-  const newName=/\/assets\/photos\/(hero-(?:napoli|italia|mondo))-full\.webp$/.exec(src)?.[1];
+  const newName=/\/assets\/photos\/((?:hero-(?:napoli|italia|mondo))|(?:now-(?:prima|durante|dopo)))-full\.webp$/.exec(src)?.[1];
   const newBase=newName?src.replace('-full.webp',''):'';
   const dimensions=newName?newPhotoSizes[newName]:undefined;
-  const avifSet=legacy?src.replace('1920.webp','640.avif')+' 640w, '+src.replace('1920.webp','1280.avif')+' 1280w, '+src.replace('.webp','.avif')+' 1920w':dimensions?newBase+'-640.avif 640w, '+newBase+'-full.avif '+dimensions.width+'w':undefined;
-  const webpSet=legacy?src.replace('1920','640')+' 640w, '+src.replace('1920','1280')+' 1280w, '+src+' 1920w':dimensions?newBase+'-640.webp 640w, '+src+' '+dimensions.width+'w':undefined;
-  const portrait=legacy&&priority?src.replace('-1920.webp','-portrait.avif'):dimensions?newBase+'-portrait.avif':'';
+  const smallWidth=dimensions?.smallWidth||640;
+  const avifSet=legacy?src.replace('1920.webp','640.avif')+' 640w, '+src.replace('1920.webp','1280.avif')+' 1280w, '+src.replace('.webp','.avif')+' 1920w':dimensions?newBase+'-'+smallWidth+'.avif '+smallWidth+'w, '+newBase+'-full.avif '+dimensions.width+'w':undefined;
+  const webpSet=legacy?src.replace('1920','640')+' 640w, '+src.replace('1920','1280')+' 1280w, '+src+' 1920w':dimensions?newBase+'-'+smallWidth+'.webp '+smallWidth+'w, '+src+' '+dimensions.width+'w':undefined;
+  const portrait=legacy&&priority?src.replace('-1920.webp','-portrait.avif'):newName?.startsWith('hero-')?newBase+'-portrait.avif':'';
   return <figure className={'editorial-photo '+className} data-photo={slot}>
     <picture>{portrait&&<source media="(max-width: 700px)" type="image/avif" srcSet={portrait}/>} {avifSet&&<source type="image/avif" srcSet={avifSet} sizes={priority?'100vw':'(max-width: 700px) 100vw, 60vw'}/>}
     <img src={src} srcSet={webpSet} sizes={priority?'100vw':'(max-width: 700px) 100vw, 60vw'} alt={locale==='en'?photo.altEn||photo.alt:photo.alt} width={dimensions?.width||1920} height={dimensions?.height||1080} loading={priority?'eager':'lazy'} fetchPriority={priority?'high':'auto'} decoding="async" style={{objectPosition:'50% '+photo.position+'%'}} /></picture>
