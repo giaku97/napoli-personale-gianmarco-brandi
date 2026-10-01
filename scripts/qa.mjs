@@ -19,10 +19,10 @@ try {
   await page.evaluate(()=>document.fonts.ready);
   assert.equal(await page.locator('h1').count(),1);
   assert.equal(await page.locator('a[href="/studio"]').count(),0);
-  assert.equal(await page.locator('.portfolio-case').count(),11);
+  assert.equal(await page.locator('.portfolio-case').count(),9);
   assert.equal(await page.locator('.portfolio-case video').count(),1);
   assert.ok((await page.locator('h1').innerText()).includes('NAPOLI'));
-  report.checks.push('Hero, independent disclaimer, eleven portfolio cases and no public editor link');
+  report.checks.push('Hero, independent disclaimer, nine portfolio cases and no public editor link');
   await page.locator('.np-location button').nth(3).click();
   assert.ok((await page.locator('.np-card-facts').innerText()).includes('MONDO'));
   await page.getByLabel('COME VUOI CHIAMARE LA TUA CARD?').fill('Gianmarco <test>');
@@ -91,7 +91,7 @@ try {
   assert.ok((await studio.locator('.studio-fields textarea').count())>0);
   await studio.getByRole('button',{name:'Lavori'}).click();
   assert.ok((await studio.locator('.studio-fields').innerText()).includes('Mostra i lavori'));
-  assert.equal(await studio.locator('.studio-card').count(),11);
+  assert.equal(await studio.locator('.studio-card').count(),9);
   report.checks.push('Studio IT/EN text fields and editable portfolio');
   await studio.close();
   const noJS=await browser.newContext({javaScriptEnabled:false});

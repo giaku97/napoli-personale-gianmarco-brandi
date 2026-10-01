@@ -1,6 +1,6 @@
 # Napoli è personale
 
-Proposta indipendente di digital marketing e fan experience di Gianmarco Brandi per SSC Napoli. Il sito è bilingue, include una selezione di lavori reali e concept personali, e non usa dati o sistemi del Club.
+Proposta indipendente di digital marketing e fan experience di Gianmarco Brandi per SSC Napoli. Il sito è bilingue, include nove lavori selezionati e concept personali, e non usa dati o sistemi del Club.
 
 ## Aprire il sito
 
@@ -35,3 +35,7 @@ Apri `/studio/`. Nella scheda **Lavori** puoi cambiare titoli, categorie, descri
 Per aggiungere un nuovo file alla versione pubblica, copialo nella repository in `public/assets/portfolio/`, fai commit e push, poi inserisci in Studio il suo percorso, per esempio `/assets/portfolio/nuova-immagine.webp` o `/assets/portfolio/nuovo-video.mp4`. Un video può usare un poster WebP nella stessa cartella. Per pubblicare la modifica fatta in Studio, esporta il JSON e chiedi a Codex di applicarlo. Per le immagini caricate direttamente nella bozza, `node scripts/materialize-content.mjs` crea file statici prima del commit.
 
 Il file `CONTENT_GUIDE.md` descrive il flusso in dettaglio. `ASSET_MANIFEST.md` collega ogni materiale del portfolio al suo originale. I PDF completi non sono pubblicati; il logotipo Kalesia resta escluso finché non si identifica la variante accettata. Il logo personale originale non è stato modificato.
+
+## Versione precedente e materiali da verificare
+
+Il tag Git pre-restyling-2026-10-01 conserva la versione precedente. I lavori esclusi dalla selezione restano in public/assets/portfolio/_archivio/. Le foto nuove sono state fornite dall'utente, ma autore, licenza e luogo degli scatti Italia/Mondo richiedono conferma; gli alt text non attribuiscono loro luoghi non verificati. Un CV approvato non è ancora disponibile.

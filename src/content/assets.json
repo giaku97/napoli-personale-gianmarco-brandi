@@ -9,13 +9,47 @@
       "height": 1943,
       "source": "User supplied original PNG",
       "transformation": "none; proportional display only"
+    },
+    {
+      "id": "hero-napoli",
+      "path": "public/assets/photos/hero-napoli-original.jpg",
+      "sha256": "C763A570657E78AC05D2C324725F3AF5C5D239EA782E1ED40514A494E13A809A",
+      "width": 892,
+      "height": 670,
+      "source": "User supplied original from Desktop/nuove foto",
+      "transformation": "none; preserved copy"
+    },
+    {
+      "id": "hero-italia",
+      "path": "public/assets/photos/hero-italia-original.jpg",
+      "sha256": "18FDD6624BBE4A16B486ED5181486BF876D6F853B5601386E26ED32B90928C99",
+      "width": 1024,
+      "height": 683,
+      "source": "User supplied original from Desktop/nuove foto",
+      "transformation": "none; preserved copy"
+    },
+    {
+      "id": "hero-mondo",
+      "path": "public/assets/photos/hero-mondo-original.jpeg",
+      "sha256": "EE640BBF31374E13B1B4D8C5FF36CEC3D9BD8FD64F57083CABA0BE927B9F6B29",
+      "width": 900,
+      "height": 600,
+      "source": "User supplied original from Desktop/nuove foto",
+      "transformation": "none; preserved copy"
+    },
+    {
+      "id": "euro-2024-new",
+      "path": "public/assets/portfolio/euro-2024-original.png",
+      "sha256": "C6BCC7C75F78AC3EEE93E5167BA4CFF0BC28628014D73C4F39B14D3B492AD176",
+      "source": "User supplied original from Desktop/nuove foto",
+      "transformation": "none; preserved copy"
     }
   ],
   "missing": [
-    "portfolio-projects",
-    "verified-project-credits",
-    "cv",
-    "public-contact"
+    "approved-cv",
+    "new-photo-photographers-and-rights",
+    "geographic-context-for-italy-and-world-photos",
+    "kalesia-accepted-logo-variant"
   ],
   "policy": "Never invent personal assets or claims. Integrate originals unchanged and record SHA-256.",
   "photographs": [
@@ -133,6 +167,99 @@
         {
           "path": "public/assets/photos/squadra-portrait.avif",
           "sha256": "dbb1ffcd0051357b26598600033d56f8748780a38216486b7c4ad05cfd016a5c"
+        }
+      ]
+    },
+    {
+      "id": "hero-napoli",
+      "author": "Not supplied",
+      "license": "Not supplied",
+      "source": "User supplied file",
+      "licenseUrl": "",
+      "originalSha256": "c763a570657e78ac05d2c324725f3af5c5d239ea782e1ed40514a494e13a809a",
+      "transformation": "responsive WebP/AVIF conversion and portrait crop; no original changes",
+      "derivatives": [
+        {
+          "path": "public/assets/photos/hero-napoli-640.avif",
+          "sha256": "10536a906d0b904c6e40d0e33a9050793483f1255fec4af1922a091a95c7817b"
+        },
+        {
+          "path": "public/assets/photos/hero-napoli-640.webp",
+          "sha256": "d4c9a461a127d892cb066aa3a82d5a292f4f3e305acbe6dbdf4072047aad2c0f"
+        },
+        {
+          "path": "public/assets/photos/hero-napoli-full.avif",
+          "sha256": "e1a2de23339d7b65f99a7ad96ee8959f7ecaeeb5f7e6556086b7e464fe4226ae"
+        },
+        {
+          "path": "public/assets/photos/hero-napoli-full.webp",
+          "sha256": "ab143974959d8fe9bbb4e9fdb577ad35d1344b439f0cb17b3f21a69ba8b41698"
+        },
+        {
+          "path": "public/assets/photos/hero-napoli-portrait.avif",
+          "sha256": "3d6ebc76f4dc0fc691dd42eff63a7b2751045af198ac124f9c3001ac96b480fd"
+        }
+      ]
+    },
+    {
+      "id": "hero-italia",
+      "author": "Not supplied",
+      "license": "Not supplied",
+      "source": "User supplied file",
+      "licenseUrl": "",
+      "originalSha256": "18fdd6624bbe4a16b486ed5181486bf876d6f853b5601386e26ed32b90928c99",
+      "transformation": "responsive WebP/AVIF conversion and portrait crop; no original changes",
+      "derivatives": [
+        {
+          "path": "public/assets/photos/hero-italia-640.avif",
+          "sha256": "b92fc2d823f31d91e531f614323ebcfecd27bbec6ac5d88c5fb4121c96b384f1"
+        },
+        {
+          "path": "public/assets/photos/hero-italia-640.webp",
+          "sha256": "0aab6aea224a89b36cdff1e4c3ed088bb03d85ebf1f3f16dd980ae3fab72d29d"
+        },
+        {
+          "path": "public/assets/photos/hero-italia-full.avif",
+          "sha256": "fd99e95d061d408966a8efa1d0d8899a6cda4575d49f7eca78d4ede0357d71c7"
+        },
+        {
+          "path": "public/assets/photos/hero-italia-full.webp",
+          "sha256": "233dd8e19bbaae0fadedbc3f17d0d514a48e0471a4732b4c28aae1fdb29aeb21"
+        },
+        {
+          "path": "public/assets/photos/hero-italia-portrait.avif",
+          "sha256": "cd05a910ed956b4757f5c8edd3585636443005ef357ab594436e486bb8da2935"
+        }
+      ]
+    },
+    {
+      "id": "hero-mondo",
+      "author": "Not supplied",
+      "license": "Not supplied",
+      "source": "User supplied file",
+      "licenseUrl": "",
+      "originalSha256": "ee640bbf31374e13b1b4d8c5ff36cec3d9bd8fd64f57083caba0be927b9f6b29",
+      "transformation": "responsive WebP/AVIF conversion and portrait crop; no original changes",
+      "derivatives": [
+        {
+          "path": "public/assets/photos/hero-mondo-640.avif",
+          "sha256": "8b84b801a5ccbd8cdc332c063febae17751364ed9aeaf548df829851b8c392f3"
+        },
+        {
+          "path": "public/assets/photos/hero-mondo-640.webp",
+          "sha256": "b0fded46386228626563deed246da033e3fbcde89e45f99853b5f4dd9a86a1bf"
+        },
+        {
+          "path": "public/assets/photos/hero-mondo-full.avif",
+          "sha256": "bd17f29b387f7470b9a7516053eb822702d127ab813febe362419d7371672b99"
+        },
+        {
+          "path": "public/assets/photos/hero-mondo-full.webp",
+          "sha256": "24453039da63693290e61b3e73670f1d43fe28fcc54121fc3f59eb611eeaf5ad"
+        },
+        {
+          "path": "public/assets/photos/hero-mondo-portrait.avif",
+          "sha256": "b7bacc7949ccc3f3612eb0ccf68cc79347025743c345b39567e0ebc06e31592e"
         }
       ]
     }

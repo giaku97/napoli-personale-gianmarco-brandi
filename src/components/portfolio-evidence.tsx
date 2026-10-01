@@ -1,7 +1,7 @@
 'use client';
 /* eslint-disable @next/next/no-img-element -- GitHub Pages serves prepared WebP files without a Next image optimizer. */
 
-import { safeImage, safeLink, safeVideo, useSite, type Project } from './site-content';
+import { safeImage, safeVideo, useSite, type Project } from './site-content';
 import './portfolio-evidence.css';
 
 const labels = {
@@ -11,6 +11,7 @@ const labels = {
   archive: { it: 'Selezione di lavori', en: 'Selected work' },
 };
 
+const featuredIds=new Set(['f1-inspector','ooh','posters','bonobolabo']);
 export function PortfolioEvidence({ projects }: { projects: Project[] }) {
   const { locale } = useSite();
   if (!projects.length) return null;
@@ -25,20 +26,17 @@ export function PortfolioEvidence({ projects }: { projects: Project[] }) {
       const title = locale === 'en' ? p.titleEn || p.title : p.title;
       const role = locale === 'en' ? p.roleEn || p.role : p.role;
       const description = locale === 'en' ? p.descriptionEn || p.description : p.description;
-      const credits = locale === 'en' ? p.creditsEn || p.credits : p.credits;
       const category = labels[p.category || 'archive'][locale];
-      return <article className={`portfolio-case ${index === 0 ? 'portfolio-case-featured' : ''}`} key={p.id}>
+      return <article className={'portfolio-case '+(featuredIds.has(p.id)?'portfolio-case-featured':'portfolio-case-selected')} key={p.id}>
         <div className="portfolio-case-story">
           <div className="portfolio-case-meta"><span>{String(index + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}</span><span>{category}</span></div>
           <h4>{title}</h4><p className="portfolio-case-role">{role}{p.year ? ` · ${p.year}` : ''}</p>
           <p className="portfolio-case-description">{description}</p>
-          {credits && <p className="portfolio-case-credits"><strong>{locale === 'it' ? 'Contesto e crediti' : 'Context and credits'}</strong><br />{credits}</p>}
-          {p.source && <a href={safeLink(p.source)} target="_blank" rel="noreferrer">{locale === 'it' ? 'Apri la fonte' : 'Open source'} ↗</a>}
           {media.length > 1 && <p className="portfolio-case-swipe">{locale === 'it' ? 'Scorri le immagini →' : 'Scroll through the media →'}</p>}
         </div>
         <div className="portfolio-case-media" role="region" tabIndex={0} aria-label={`${title}: ${locale === 'it' ? 'galleria' : 'gallery'}`}>
           {media.map((m, i) => <figure className={m.type === 'video' ? 'portfolio-media-video' : ''} key={`${m.src}-${i}`}>
-            {m.type === 'video' ? <video controls playsInline preload="metadata" poster={safeImage(m.poster)} aria-label={locale === 'en' ? m.altEn || m.alt : m.alt}><source src={safeVideo(m.src)} type="video/mp4" />{locale === 'it' ? 'Il browser non supporta questo video.' : 'Your browser does not support this video.'}</video> : <img src={safeImage(m.src)} srcSet={m.small ? `${safeImage(m.small)} 800w, ${safeImage(m.src)} 1600w` : undefined} sizes="(max-width: 700px) 86vw, 55vw" alt={locale === 'en' ? m.altEn || m.alt : m.alt} loading="lazy" decoding="async" />}
+            {m.type === 'video' ? <video controls playsInline preload="metadata" poster={safeImage(m.poster)} width={m.width||960} height={m.height||540} aria-label={locale === 'en' ? m.altEn || m.alt : m.alt}><source src={safeVideo(m.src)} type="video/mp4" />{locale === 'it' ? 'Il browser non supporta questo video.' : 'Your browser does not support this video.'}</video> : <img src={safeImage(m.src)} srcSet={m.small ? safeImage(m.small)+' '+(m.smallWidth||800)+'w, '+safeImage(m.src)+' '+(m.width||1600)+'w' : undefined} sizes="(max-width: 700px) 86vw, 55vw" alt={locale === 'en' ? m.altEn || m.alt : m.alt} width={m.width||1600} height={m.height||1000} loading="lazy" decoding="async" />}
             {(m.caption || m.captionEn || m.credits) && <figcaption><span>{locale === 'en' ? m.captionEn || m.caption : m.caption}</span>{m.credits && <small>{m.credits}</small>}</figcaption>}
           </figure>)}
         </div>

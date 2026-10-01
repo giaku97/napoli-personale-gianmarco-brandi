@@ -110,3 +110,18 @@
 @media(max-width:370px){.np-header .np-brand { font-size:11px; }.np-brand strong { font-size:14px; }.np-lang { gap:3px; }.np-pillars b { font-size:10px; }.np-pillars span { font-size:11px; }.np-segment button { padding:9px 5px; font-size:12px; }.np-card-facts { gap:8px; }}
 @media(prefers-reduced-motion:reduce){.np * { scroll-behavior:auto!important; transition:none!important; animation:none!important; }}
 .np-work{margin:clamp(3rem,7vw,7rem) 0}.np-work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,24rem),1fr));gap:1.5rem;margin-top:2rem}.np-work article{background:#fff;color:#102234}.np-work img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}.np-work article>div{padding:1.5rem}.np-work h3{margin:0 0 .5rem}.np-work small{display:block;opacity:.65}.np-work p{line-height:1.55}.np-work a{color:#005da8;font-weight:700}
+
+.np-hero-frame{position:absolute;inset:0;z-index:-1}
+.np-hero-frame .np-hero-photo{z-index:0}
+.np .np-mosaic{grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);height:clamp(340px,38vw,500px)}
+.np .np-mosaic>figure:last-child{display:block}
+.np .np-strategy-grid{grid-template-columns:1fr;max-width:680px}
+.np .np-yours{padding-block:clamp(105px,12vw,180px)}
+.np .np-yours .np-section-intro{border-bottom:1px solid #43657d;padding-bottom:clamp(38px,5vw,65px)}
+.np .np-yours .np-section-intro h2{font-size:clamp(70px,9.6vw,150px);max-width:1150px}
+.np .np-contact{display:flex;align-items:center;gap:clamp(18px,3vw,45px);margin-top:38px;scroll-margin-top:100px}
+.np .np-contact-main{min-width:190px}
+.np .np-contact-secondary{padding:14px 0;border-bottom:1px solid #bce8ff;color:#e2f3ff;font-size:15px;font-weight:700}
+.np .np-contact-secondary:hover{color:#fff;border-color:#fff}
+@media(max-width:800px){.np .np-mosaic{grid-template-columns:1.2fr .8fr;height:360px}}
+@media(max-width:600px){.np .np-mosaic{grid-template-columns:1fr 1fr;height:300px}.np .np-yours{padding-block:90px}.np .np-yours .np-section-intro h2{font-size:clamp(62px,14vw,82px)}.np .np-contact{align-items:stretch;flex-direction:column;gap:18px}.np .np-contact-main{justify-content:space-between}.np .np-contact-secondary{align-self:flex-start}}

@@ -14,17 +14,42 @@ try {
   page.on('pageerror', e => errors.push(e.message));
   await page.goto(base, { waitUntil: 'networkidle' });
   const cases = page.locator('.portfolio-case');
-  assert.equal(await cases.count(), 11);
-  assert.equal(await page.locator('.portfolio-case-media figure').count(), 36);
+  assert.equal(await cases.count(), 9);
+  assert.equal(await page.locator('.portfolio-case-media figure').count(), 30);
+  assert.equal(await page.locator('.portfolio-case-credits').count(), 0);
+  assert.equal(await page.getByText('Segni e identità').count(), 0);
+  assert.equal(await page.getByText('Brendix').count(), 0);
+  assert.equal(await page.locator('img[src*="stile-libero"]').count(), 0);
+  assert.equal(await page.locator('.portfolio-case').first().locator('.portfolio-case-meta').innerText().then(x=>x.includes('01 / 09')),true);
+  assert.equal(await page.locator('#crediti-immagini').count(),1);
+  assert.equal(await page.locator('a[href="mailto:gianmarcobrandi697@gmail.com"]').count(),1);
+  assert.equal(await page.locator('a[href="https://www.linkedin.com/in/gianmarco-brandi/"]').count(),1);
+  const slots=['hero','hero-napoli','hero-italia','hero-mondo'];
+  for(let i=0;i<slots.length;i++){
+    await page.locator('.np-location button').nth(i).click();
+    await page.waitForFunction(slot=>document.querySelectorAll('.np-hero-frame').length===1 && document.querySelector('.np-hero-frame [data-photo]')?.getAttribute('data-photo')===slot,slots[i]);
+    assert.ok(await page.locator('.np-hero-frame img').first().evaluate(img=>img.complete && img.naturalWidth>0));
+    await page.screenshot({path:path.join(out,'hero-'+slots[i]+'-desktop.png')});
+  }
+  await page.locator('.np-location button').first().click();
   await cases.first().scrollIntoViewIfNeeded();
   await cases.first().screenshot({ path: path.join(out, 'portfolio-desktop.png') });
   const video = page.locator('.portfolio-case video');
   await video.scrollIntoViewIfNeeded();
+  await video.screenshot({path:path.join(out,'bonobolabo-video-poster.png')});
   await video.evaluate(async v => { v.muted = true; await v.play(); });
   await page.waitForFunction(() => document.querySelector('.portfolio-case video')?.currentTime > 0.2);
   assert.ok(await video.evaluate(v => v.readyState >= 2));
   await video.evaluate(v => v.pause());
   await page.setViewportSize({ width: 390, height: 844 });
+  for(let i=0;i<slots.length;i++){
+    await page.locator('.np-location button').nth(i).click();
+    await page.waitForFunction(slot=>document.querySelectorAll('.np-hero-frame').length===1 && document.querySelector('.np-hero-frame [data-photo]')?.getAttribute('data-photo')===slot,slots[i]);
+    await page.evaluate(() => scrollTo(0, 0));
+    await page.screenshot({path:path.join(out,'hero-'+slots[i]+'-mobile.png')});
+  }
+  await page.locator('#contatti').scrollIntoViewIfNeeded();
+  await page.locator('#contatti').screenshot({path:path.join(out,'contact-mobile.png')});
   await cases.first().scrollIntoViewIfNeeded();
   await cases.first().screenshot({ path: path.join(out, 'portfolio-mobile.png') });
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
@@ -46,5 +71,5 @@ try {
   assert.ok(exported.identity.projects[0].media[0].src.endsWith('f1-abu-dhabi.webp'));
   assert.equal(exported.identity.projects[0].media.length, 9);
   assert.deepEqual(errors, []);
-  console.log('Portfolio: 11 projects, 36 media, responsive screenshots, video playback, bilingual copy, Studio export and reorder passed.');
+  console.log('Portfolio: 9 projects, 30 media, responsive screenshots, video playback, bilingual copy, Studio export and reorder passed.');
 } finally { await browser.close(); }
