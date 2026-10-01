@@ -27,8 +27,12 @@ try {
   assert.ok((await page.locator('.np-card-facts').innerText()).includes('MONDO'));
   await page.getByLabel('COME VUOI CHIAMARE LA TUA CARD?').fill('Gianmarco <test>');
   assert.ok((await page.locator('.np-card-identity').textContent()).includes('Gianmarco <test>'));
-  await page.locator('.np-segment button').nth(1).click();
-  await page.locator('.np-now-copy h3').filter({hasText:'PARTITA'}).waitFor();
+  for(const [index,slot] of ['match','hero','hero-mondo'].entries()){
+    await page.locator('.np-segment button').nth(index).click();
+    await page.waitForFunction(expected=>{const photos=document.querySelectorAll('.np-now-image figure[data-photo]');return photos.length===1&&photos[0].getAttribute('data-photo')===expected;},slot);
+    assert.ok(await page.locator('.np-now-image img').evaluate(img=>img.complete&&img.naturalWidth>0));
+  }
+  await page.locator('.np-now-copy h3').filter({hasText:'SERATA'}).waitFor();
   await page.locator('#np-caption').fill('La nostra serata');
   await page.getByRole('button',{name:/SALVA NEL TUO MY NAPOLI/}).click();
   assert.ok((await page.locator('.np-saved-moments').innerText()).includes('La nostra serata'));

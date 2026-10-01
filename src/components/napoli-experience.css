@@ -125,3 +125,5 @@
 .np .np-contact-secondary:hover{color:#fff;border-color:#fff}
 @media(max-width:800px){.np .np-mosaic{grid-template-columns:1.2fr .8fr;height:360px}}
 @media(max-width:600px){.np .np-mosaic{grid-template-columns:1fr 1fr;height:300px}.np .np-yours{padding-block:90px}.np .np-yours .np-section-intro h2{font-size:clamp(62px,14vw,82px)}.np .np-contact{align-items:stretch;flex-direction:column;gap:18px}.np .np-contact-main{justify-content:space-between}.np .np-contact-secondary{align-self:flex-start}}
+
+.np-now-image-frame{position:absolute;inset:0}.np-now-image-label{z-index:1}
