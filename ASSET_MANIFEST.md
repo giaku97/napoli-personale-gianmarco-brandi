@@ -183,8 +183,8 @@ Autore, licenza e luogo delle nuove fotografie non sono documentati nei file. So
 | public/assets/portfolio/euro-2024.webp | 443508 B | 4bead8a18bf993012ad901f1d80c0280b987726c06bd46bc642d2e0482771b5a |
 | public/assets/portfolio/f1-abu-dhabi-800.webp | 163228 B | c1d1d56a042af32cc036211e217a3301ce1934875daa618cc5fb47ebf91d93f8 |
 | public/assets/portfolio/f1-abu-dhabi.webp | 480408 B | ae4e36c2a6f4fcfaa646381823b144fcf0df4c80c95eddf63504528d1bceabce |
-| public/assets/portfolio/f1-bahrain-800.webp | 164344 B | bc49f894fd2c06e1b75c66c4522c56cd7de2743c2fc559ba5100443bd333113f |
-| public/assets/portfolio/f1-bahrain.webp | 319494 B | 2e8a3f1aff90c2750640d8d53857b5bc6d43a1df9c1473776776e88e3e1a7798 |
+| public/assets/portfolio/f1-bahrain-800.webp | 418650 B | 41086136cd7dc5289522826926cd81b2ad88a4c6206709e339eff9fa4992994d |
+| public/assets/portfolio/f1-bahrain.webp | 599718 B | ecbea3fc5c26956a37dcc52d75ae91a8fedb0347dbcde8abb560755602d1db47 |
 | public/assets/portfolio/f1-brazil-800.webp | 112866 B | f5c5f0bc6d52965152dce9905055f3a87115d1d5e9b80f8621d675b75288f5f4 |
 | public/assets/portfolio/f1-brazil.webp | 393016 B | b0cb8dcdb65466f8b322cfcfd17c670ac16fec28d13f51a8dddc0ad01a630795 |
 | public/assets/portfolio/f1-canada-800.webp | 131846 B | 355fdfeef7c70de18f63ba0881dac0dec03d4bb09d410b7fff3ec80275069490 |
