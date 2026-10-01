@@ -19,9 +19,10 @@ try {
   await page.evaluate(()=>document.fonts.ready);
   assert.equal(await page.locator('h1').count(),1);
   assert.equal(await page.locator('a[href="/studio"]').count(),0);
-  assert.equal(await page.locator('.np-work').count(),0);
+  assert.equal(await page.locator('.portfolio-case').count(),11);
+  assert.equal(await page.locator('.portfolio-case video').count(),1);
   assert.ok((await page.locator('h1').innerText()).includes('NAPOLI'));
-  report.checks.push('Hero, independent disclaimer, hidden portfolio and no public editor link');
+  report.checks.push('Hero, independent disclaimer, eleven portfolio cases and no public editor link');
   await page.locator('.np-location button').nth(3).click();
   assert.ok((await page.locator('.np-card-facts').innerText()).includes('MONDO'));
   await page.getByLabel('COME VUOI CHIAMARE LA TUA CARD?').fill('Gianmarco <test>');
@@ -52,9 +53,13 @@ try {
   report.checks.push('Italian and English switch');
   const dead=await page.locator('a[href^="#"]').evaluateAll(links=>links.map(a=>a.getAttribute('href')).filter(h=>!document.getElementById(h.slice(1))));
   assert.deepEqual(dead,[]);
-  const images=await page.locator('img').evaluateAll(imgs=>imgs.filter(i=>!i.complete||!i.naturalWidth).map(i=>i.src));
-  assert.deepEqual(images,[]);
-  report.checks.push('Anchors and visible image sources resolve');
+  const assets=await page.evaluate(async()=>{
+    const urls=[...new Set([...document.querySelectorAll('img')].map(i=>i.src).concat([...document.querySelectorAll('video')].flatMap(v=>[v.poster,...[...v.querySelectorAll('source')].map(s=>s.src)])))].filter(Boolean);
+    return Promise.all(urls.map(async url=>{const response=await fetch(url);return {url,status:response.status,type:response.headers.get('content-type')};}));
+  });
+  assert.deepEqual(assets.filter(a=>a.status!==200),[]);
+  assert.ok(assets.some(a=>a.type?.includes('video/mp4')));
+  report.checks.push('Anchors, images, posters and video resolve under the Pages path');
   for(const width of [390,768,1440,1920]){
     await page.setViewportSize({width,height:900});
     await page.goto(baseURL,{waitUntil:'networkidle'});
@@ -85,8 +90,9 @@ try {
   await studio.getByRole('button',{name:'English'}).click();
   assert.ok((await studio.locator('.studio-fields textarea').count())>0);
   await studio.getByRole('button',{name:'Lavori'}).click();
-  assert.ok((await studio.locator('.studio-fields').innerText()).includes('Abilita'));
-  report.checks.push('Studio IT/EN text fields and gated work archive');
+  assert.ok((await studio.locator('.studio-fields').innerText()).includes('Mostra i lavori'));
+  assert.equal(await studio.locator('.studio-card').count(),11);
+  report.checks.push('Studio IT/EN text fields and editable portfolio');
   await studio.close();
   const noJS=await browser.newContext({javaScriptEnabled:false});
   const staticPage=await noJS.newPage();

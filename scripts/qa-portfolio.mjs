@@ -1,0 +1,50 @@
+import { chromium } from '@playwright/test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+
+const base = process.env.QA_URL || 'http://127.0.0.1:4173/napoli-personale-gianmarco-brandi';
+const out = path.resolve('../qa');
+await fs.mkdir(out, { recursive: true });
+const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const errors = [];
+try {
+  const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, acceptDownloads: true });
+  const page = await context.newPage();
+  page.on('pageerror', e => errors.push(e.message));
+  await page.goto(base, { waitUntil: 'networkidle' });
+  const cases = page.locator('.portfolio-case');
+  assert.equal(await cases.count(), 11);
+  assert.equal(await page.locator('.portfolio-case-media figure').count(), 36);
+  await cases.first().scrollIntoViewIfNeeded();
+  await cases.first().screenshot({ path: path.join(out, 'portfolio-desktop.png') });
+  const video = page.locator('.portfolio-case video');
+  await video.scrollIntoViewIfNeeded();
+  await video.evaluate(async v => { v.muted = true; await v.play(); });
+  await page.waitForFunction(() => document.querySelector('.portfolio-case video')?.currentTime > 0.2);
+  assert.ok(await video.evaluate(v => v.readyState >= 2));
+  await video.evaluate(v => v.pause());
+  await page.setViewportSize({ width: 390, height: 844 });
+  await cases.first().scrollIntoViewIfNeeded();
+  await cases.first().screenshot({ path: path.join(out, 'portfolio-mobile.png') });
+  assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+  await page.getByRole('button', { name: 'EN', exact: true }).click();
+  await cases.first().getByText('Selected work').waitFor();
+  await page.getByRole('button', { name: 'IT', exact: true }).click();
+
+  const studio = await context.newPage();
+  studio.on('pageerror', e => errors.push('studio: ' + e.message));
+  await studio.goto(base + '/studio/', { waitUntil: 'networkidle' });
+  await studio.getByRole('button', { name: 'Lavori', exact: true }).click();
+  await studio.locator('.studio-card').first().locator('summary').click();
+  await studio.getByLabel('Titolo · italiano').first().fill('F1 Inspector QA');
+  await studio.locator('.studio-card').first().locator('.studio-media-item').nth(1).getByRole('button', { name: 'Su ↑' }).click();
+  const download = studio.waitForEvent('download');
+  await studio.getByRole('button', { name: /Esporta progetto/ }).click();
+  const exported = JSON.parse(await fs.readFile(await (await download).path(), 'utf8'));
+  assert.equal(exported.identity.projects[0].title, 'F1 Inspector QA');
+  assert.ok(exported.identity.projects[0].media[0].src.endsWith('f1-abu-dhabi.webp'));
+  assert.equal(exported.identity.projects[0].media.length, 9);
+  assert.deepEqual(errors, []);
+  console.log('Portfolio: 11 projects, 36 media, responsive screenshots, video playback, bilingual copy, Studio export and reorder passed.');
+} finally { await browser.close(); }

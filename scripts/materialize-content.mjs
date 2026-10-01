@@ -31,6 +31,13 @@ async function image(value) {
 }
 site.identity.logo=await image(site.identity.logo);
 for(const photo of Object.values(site.photos))photo.src=await image(photo.src);
-for(const project of site.identity.projects)project.image=await image(project.image);
+for(const project of site.identity.projects){
+ project.image=await image(project.image);
+ for(const media of project.media||[]){
+  if(media.type==='image')media.src=await image(media.src);
+  if(media.small)media.small=await image(media.small);
+  if(media.poster)media.poster=await image(media.poster);
+ }
+}
 if(count){await writeFile(manifestPath,JSON.stringify(manifest,null,2)+'\n');await writeFile(file,JSON.stringify(site,null,2)+'\n');}
 console.log(`Materialized ${count} image references; original bytes preserved.`);

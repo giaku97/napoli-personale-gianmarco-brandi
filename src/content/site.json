@@ -207,7 +207,613 @@
     "email": "",
     "cv": "",
     "portfolioUrl": "",
-    "projects": []
+    "projects": [
+      {
+        "id": "f1-inspector",
+        "title": "F1 Inspector",
+        "titleEn": "F1 Inspector",
+        "category": "archive",
+        "role": "Grafiche social e identità visiva",
+        "roleEn": "Social graphics and visual identity",
+        "year": "",
+        "description": "Una serie di grafiche per i Gran Premi di una pagina social dedicata alla Formula 1, che aveva 10.000 follower. Il logo attuale e quello precedente raccontano l’evoluzione dell’identità.",
+        "descriptionEn": "A Grand Prix graphics series for a Formula 1 social page with 10,000 followers. The current and previous logos show how its identity evolved.",
+        "image": "/assets/portfolio/f1-saudi-arabia.webp",
+        "alt": "Grafica F1 Inspector per il Gran Premio dell’Arabia Saudita",
+        "source": "",
+        "credits": "Materiali forniti da Gianmarco Brandi; nome del cliente non indicato.",
+        "creditsEn": "Assets supplied by Gianmarco Brandi; client name not provided.",
+        "verified": true,
+        "media": [
+          {
+            "type": "image",
+            "src": "/assets/portfolio/f1-saudi-arabia.webp",
+            "small": "/assets/portfolio/f1-saudi-arabia-800.webp",
+            "alt": "Grafica F1 Inspector per il Gran Premio dell’Arabia Saudita",
+            "altEn": "Grafica F1 Inspector per il Gran Premio dell’Arabia Saudita",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/f1-abu-dhabi.webp",
+            "small": "/assets/portfolio/f1-abu-dhabi-800.webp",
+            "alt": "Grafica F1 Inspector per il Gran Premio di Abu Dhabi",
+            "altEn": "Grafica F1 Inspector per il Gran Premio di Abu Dhabi",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/f1-brazil.webp",
+            "small": "/assets/portfolio/f1-brazil-800.webp",
+            "alt": "Grafica F1 Inspector per il Gran Premio del Brasile",
+            "altEn": "Grafica F1 Inspector per il Gran Premio del Brasile",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/f1-canada.webp",
+            "small": "/assets/portfolio/f1-canada-800.webp",
+            "alt": "Grafica F1 Inspector per il Gran Premio del Canada",
+            "altEn": "Grafica F1 Inspector per il Gran Premio del Canada",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/f1-qatar.webp",
+            "small": "/assets/portfolio/f1-qatar-800.webp",
+            "alt": "Grafica F1 Inspector per il Gran Premio del Qatar",
+            "altEn": "Grafica F1 Inspector per il Gran Premio del Qatar",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/f1-mexico.webp",
+            "small": "/assets/portfolio/f1-mexico-800.webp",
+            "alt": "Grafica F1 Inspector per il Gran Premio del Messico",
+            "altEn": "Grafica F1 Inspector per il Gran Premio del Messico",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/f1-bahrain.webp",
+            "small": "/assets/portfolio/f1-bahrain-800.webp",
+            "alt": "Grafica F1 Inspector per il Gran Premio del Bahrain",
+            "altEn": "Grafica F1 Inspector per il Gran Premio del Bahrain",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/f1-logo-current.webp",
+            "small": "/assets/portfolio/f1-logo-current-800.webp",
+            "alt": "Logo attuale di F1 Inspector",
+            "altEn": "Logo attuale di F1 Inspector",
+            "caption": "Logo attuale",
+            "captionEn": "Logo attuale",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/f1-logo-previous.webp",
+            "small": "/assets/portfolio/f1-logo-previous-800.webp",
+            "alt": "Logo precedente di F1 Inspector",
+            "altEn": "Logo precedente di F1 Inspector",
+            "caption": "Logo precedente · evoluzione dell’identità",
+            "captionEn": "Logo precedente · evoluzione dell’identità",
+            "credits": "",
+            "poster": ""
+          }
+        ]
+      },
+      {
+        "id": "mugi",
+        "title": "Mugi",
+        "titleEn": "Mugi",
+        "category": "commissioned",
+        "role": "Grafiche per eventi",
+        "roleEn": "Event graphics",
+        "year": "",
+        "description": "Quattro grafiche commissionate per promuovere eventi nel locale.",
+        "descriptionEn": "Four commissioned graphics promoting events at the venue.",
+        "image": "/assets/portfolio/mugi-1.webp",
+        "alt": "Grafica 1 per un evento al Mugi",
+        "source": "",
+        "credits": "Materiali forniti da Gianmarco Brandi.",
+        "creditsEn": "Assets supplied by Gianmarco Brandi.",
+        "verified": true,
+        "media": [
+          {
+            "type": "image",
+            "src": "/assets/portfolio/mugi-1.webp",
+            "small": "",
+            "alt": "Grafica 1 per un evento al Mugi",
+            "altEn": "Grafica 1 per un evento al Mugi",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/mugi-2.webp",
+            "small": "",
+            "alt": "Grafica 2 per un evento al Mugi",
+            "altEn": "Grafica 2 per un evento al Mugi",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/mugi-3.webp",
+            "small": "",
+            "alt": "Grafica 3 per un evento al Mugi",
+            "altEn": "Grafica 3 per un evento al Mugi",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/mugi-4.webp",
+            "small": "",
+            "alt": "Grafica 4 per un evento al Mugi",
+            "altEn": "Grafica 4 per un evento al Mugi",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          }
+        ]
+      },
+      {
+        "id": "pops-planet",
+        "title": "Pops Planet / Halloween",
+        "titleEn": "Pops Planet / Halloween",
+        "category": "commissioned",
+        "role": "Grafica social e locandina",
+        "roleEn": "Social graphic and flyer",
+        "year": "",
+        "description": "Materiali commissionati da Pops Planet per promuovere un evento Halloween sui social e tramite volantinaggio.",
+        "descriptionEn": "Commissioned by Pops Planet to promote a Halloween event on social media and through flyers.",
+        "image": "/assets/portfolio/pops-funko.webp",
+        "alt": "Grafica Halloween con personaggio Funko per Pops Planet",
+        "source": "",
+        "credits": "Materiali forniti da Gianmarco Brandi.",
+        "creditsEn": "Assets supplied by Gianmarco Brandi.",
+        "verified": true,
+        "media": [
+          {
+            "type": "image",
+            "src": "/assets/portfolio/pops-funko.webp",
+            "small": "/assets/portfolio/pops-funko-800.webp",
+            "alt": "Grafica Halloween con personaggio Funko per Pops Planet",
+            "altEn": "Grafica Halloween con personaggio Funko per Pops Planet",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/pops-halloween-poster.webp",
+            "small": "/assets/portfolio/pops-halloween-poster-800.webp",
+            "alt": "Locandina A5 Halloween per Pops Planet",
+            "altEn": "Locandina A5 Halloween per Pops Planet",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          }
+        ]
+      },
+      {
+        "id": "ooh",
+        "title": "Campagne OOH",
+        "titleEn": "Out-of-home campaigns",
+        "category": "agency",
+        "role": "Lavori realizzati tramite agenzia",
+        "roleEn": "Work produced through an agency",
+        "year": "",
+        "description": "Affissioni per Benny Traslochi, Istituto Santa Lucia, SAPNA e Baby Gang SOS. Quest’ultima campagna denuncia aggressioni e violenze delle baby gang a Napoli.",
+        "descriptionEn": "Outdoor work for Benny Traslochi, Istituto Santa Lucia, SAPNA and Baby Gang SOS. The latter campaign speaks out against assaults and violence by youth gangs in Naples.",
+        "image": "/assets/portfolio/ooh-baby-gang-creative.webp",
+        "alt": "Creatività Baby Gang SOS contro le violenze a Napoli",
+        "source": "",
+        "credits": "Lavori commissionati tramite un’agenzia con cui Gianmarco Brandi ha lavorato; contributo specifico non documentato.",
+        "creditsEn": "Commissioned through an agency Gianmarco Brandi worked with; specific contribution not documented.",
+        "verified": true,
+        "media": [
+          {
+            "type": "image",
+            "src": "/assets/portfolio/ooh-baby-gang-creative.webp",
+            "small": "/assets/portfolio/ooh-baby-gang-creative-800.webp",
+            "alt": "Creatività Baby Gang SOS contro le violenze a Napoli",
+            "altEn": "Creatività Baby Gang SOS contro le violenze a Napoli",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/ooh-baby-gang-placement.webp",
+            "small": "/assets/portfolio/ooh-baby-gang-placement-800.webp",
+            "alt": "Affissione Baby Gang SOS in contesto urbano",
+            "altEn": "Affissione Baby Gang SOS in contesto urbano",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/ooh-benny.webp",
+            "small": "/assets/portfolio/ooh-benny-800.webp",
+            "alt": "Affissione Benny Traslochi",
+            "altEn": "Affissione Benny Traslochi",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/ooh-santa-lucia.webp",
+            "small": "/assets/portfolio/ooh-santa-lucia-800.webp",
+            "alt": "Affissione Istituto Santa Lucia",
+            "altEn": "Affissione Istituto Santa Lucia",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/ooh-sapna.webp",
+            "small": "/assets/portfolio/ooh-sapna-800.webp",
+            "alt": "Affissione SAPNA",
+            "altEn": "Affissione SAPNA",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          }
+        ]
+      },
+      {
+        "id": "bonobolabo",
+        "title": "Sketch Your Deck 2024",
+        "titleEn": "Sketch Your Deck 2024",
+        "category": "concept",
+        "role": "Progetto per il concorso Bonobolabo",
+        "roleEn": "Project for the Bonobolabo contest",
+        "year": "",
+        "description": "Una proposta a tema punk per Sketch Your Deck 2024: la grafica prende forma su tavola da skate e lattina, con un video del progetto.",
+        "descriptionEn": "A punk-themed entry for Sketch Your Deck 2024: the design appears on a skateboard and a can, alongside a project video.",
+        "image": "/assets/portfolio/bonobolabo-skate.webp",
+        "alt": "Mockup della tavola da skate Bonobolabo",
+        "source": "",
+        "credits": "Materiali del concorso Bonobolabo forniti da Gianmarco Brandi.",
+        "creditsEn": "Bonobolabo contest assets supplied by Gianmarco Brandi.",
+        "verified": true,
+        "media": [
+          {
+            "type": "image",
+            "src": "/assets/portfolio/bonobolabo-skate.webp",
+            "small": "/assets/portfolio/bonobolabo-skate-800.webp",
+            "alt": "Mockup della tavola da skate Bonobolabo",
+            "altEn": "Mockup della tavola da skate Bonobolabo",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/bonobolabo-beer.webp",
+            "small": "/assets/portfolio/bonobolabo-beer-800.webp",
+            "alt": "Mockup della lattina Bonobolabo",
+            "altEn": "Mockup della lattina Bonobolabo",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "video",
+            "src": "/assets/portfolio/bonobolabo-video.mp4",
+            "small": "",
+            "alt": "Video del progetto Sketch Your Deck 2024",
+            "altEn": "Video del progetto Sketch Your Deck 2024",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": "/assets/portfolio/bonobolabo-poster.webp"
+          }
+        ]
+      },
+      {
+        "id": "brand-identities",
+        "title": "Segni e identità",
+        "titleEn": "Marks and identities",
+        "category": "archive",
+        "role": "Proposte di logotipo e identità",
+        "roleEn": "Logo and identity proposals",
+        "year": "",
+        "description": "Una selezione di segni: Argus Consulting, Badbonny e il logotipo Pianeta Vela. Il render mostra l’insegna Pianeta Vela applicata a un locale.",
+        "descriptionEn": "A selection of marks: Argus Consulting, Badbonny and the Pianeta Vela logotype. The render shows the Pianeta Vela sign on a storefront.",
+        "image": "/assets/portfolio/logo-argus.webp",
+        "alt": "Logo Argus Consulting",
+        "source": "",
+        "credits": "Logotipo Pianeta Vela estratto dal brand manual fornito. Variante Kalesia esclusa perché quella accettata non è identificabile.",
+        "creditsEn": "Pianeta Vela logotype extracted from the supplied brand manual. Kalesia is omitted because the accepted variant cannot be identified.",
+        "verified": true,
+        "media": [
+          {
+            "type": "image",
+            "src": "/assets/portfolio/logo-argus.webp",
+            "small": "/assets/portfolio/logo-argus-800.webp",
+            "alt": "Logo Argus Consulting",
+            "altEn": "Logo Argus Consulting",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/logo-badbonny.webp",
+            "small": "/assets/portfolio/logo-badbonny-800.webp",
+            "alt": "Logo Badbonny per il fantacalcio",
+            "altEn": "Logo Badbonny per il fantacalcio",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/logo-pianeta-vela.webp",
+            "small": "/assets/portfolio/logo-pianeta-vela-800.webp",
+            "alt": "Logotipo Pianeta Vela",
+            "altEn": "Logotipo Pianeta Vela",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/pianeta-vela-storefront.webp",
+            "small": "/assets/portfolio/pianeta-vela-storefront-800.webp",
+            "alt": "Render di un locale con insegna Pianeta Vela",
+            "altEn": "Render di un locale con insegna Pianeta Vela",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          }
+        ]
+      },
+      {
+        "id": "brochures",
+        "title": "Presentazioni",
+        "titleEn": "Presentations",
+        "category": "archive",
+        "role": "Copertine di brochure",
+        "roleEn": "Brochure covers",
+        "year": "",
+        "description": "Due copertine originali, BIP e Mavasoft, presentate come mockup visivi. I documenti completi non sono pubblicati.",
+        "descriptionEn": "Two original covers, BIP and Mavasoft, shown as visual mockups. The full documents are not published.",
+        "image": "/assets/portfolio/bip-cover.webp",
+        "alt": "Copertina della presentazione BIP",
+        "source": "",
+        "credits": "Copertine ricavate dai PDF originali forniti da Gianmarco Brandi.",
+        "creditsEn": "Covers derived from the original PDFs supplied by Gianmarco Brandi.",
+        "verified": true,
+        "media": [
+          {
+            "type": "image",
+            "src": "/assets/portfolio/bip-cover.webp",
+            "small": "/assets/portfolio/bip-cover-800.webp",
+            "alt": "Copertina della presentazione BIP",
+            "altEn": "Copertina della presentazione BIP",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/mavasoft-cover.webp",
+            "small": "/assets/portfolio/mavasoft-cover-800.webp",
+            "alt": "Copertina del company profile Mavasoft 2025",
+            "altEn": "Copertina del company profile Mavasoft 2025",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          }
+        ]
+      },
+      {
+        "id": "brendix",
+        "title": "Brendix",
+        "titleEn": "Brendix",
+        "category": "concept",
+        "role": "Concept indipendente",
+        "roleEn": "Independent concept",
+        "year": "",
+        "description": "Un concept visivo personale dedicato al fantacalcio.",
+        "descriptionEn": "An independent visual concept for fantasy football.",
+        "image": "/assets/portfolio/brendix.webp",
+        "alt": "Concept visivo Brendix per il fantacalcio",
+        "source": "",
+        "credits": "Concept personale di Gianmarco Brandi.",
+        "creditsEn": "Personal concept by Gianmarco Brandi.",
+        "verified": true,
+        "media": [
+          {
+            "type": "image",
+            "src": "/assets/portfolio/brendix.webp",
+            "small": "/assets/portfolio/brendix-800.webp",
+            "alt": "Concept visivo Brendix per il fantacalcio",
+            "altEn": "Concept visivo Brendix per il fantacalcio",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          }
+        ]
+      },
+      {
+        "id": "legends-never-die",
+        "title": "Legends Never Die",
+        "titleEn": "Legends Never Die",
+        "category": "concept",
+        "role": "Grafica celebrativa",
+        "roleEn": "Tribute graphic",
+        "year": "",
+        "description": "Una grafica celebrativa dedicata a Ken Block.",
+        "descriptionEn": "A tribute graphic dedicated to Ken Block.",
+        "image": "/assets/portfolio/legends-never-die.webp",
+        "alt": "Grafica Legends Never Die dedicata a Ken Block",
+        "source": "",
+        "credits": "Grafica personale di Gianmarco Brandi.",
+        "creditsEn": "Personal graphic by Gianmarco Brandi.",
+        "verified": true,
+        "media": [
+          {
+            "type": "image",
+            "src": "/assets/portfolio/legends-never-die.webp",
+            "small": "/assets/portfolio/legends-never-die-800.webp",
+            "alt": "Grafica Legends Never Die dedicata a Ken Block",
+            "altEn": "Grafica Legends Never Die dedicata a Ken Block",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          }
+        ]
+      },
+      {
+        "id": "box-office-battle",
+        "title": "Box Office Battle",
+        "titleEn": "Box Office Battle",
+        "category": "concept",
+        "role": "Concept personale",
+        "roleEn": "Personal concept",
+        "year": "",
+        "description": "Un annuncio immaginato per il ritorno di Avatar 2 al box office, dopo il primato di Avengers: Endgame. La scena omaggia e parodizza Silente e Piton: Thanos è spaventato, Cameron interpreta Piton, il Patronus è Toruk e sullo sfondo compaiono poster Marvel.",
+        "descriptionEn": "An imagined announcement for Avatar 2’s return to the box office after Avengers: Endgame had led the charts. The scene pays playful homage to Dumbledore and Snape: Thanos looks frightened, Cameron plays Snape, Toruk appears as the Patronus and Marvel posters fill the background.",
+        "image": "/assets/portfolio/box-office-battle.webp",
+        "alt": "Poster Box Office Battle con Avatar 2, Thanos e riferimenti a Harry Potter",
+        "source": "",
+        "credits": "Concept personale di Gianmarco Brandi.",
+        "creditsEn": "Personal concept by Gianmarco Brandi.",
+        "verified": true,
+        "media": [
+          {
+            "type": "image",
+            "src": "/assets/portfolio/box-office-battle.webp",
+            "small": "/assets/portfolio/box-office-battle-800.webp",
+            "alt": "Poster Box Office Battle con Avatar 2, Thanos e riferimenti a Harry Potter",
+            "altEn": "Poster Box Office Battle con Avatar 2, Thanos e riferimenti a Harry Potter",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          }
+        ]
+      },
+      {
+        "id": "posters",
+        "title": "Cultura pop, calcio e cinema",
+        "titleEn": "Pop culture, football and cinema",
+        "category": "concept",
+        "role": "Concept e poster personali",
+        "roleEn": "Personal concepts and posters",
+        "year": "",
+        "description": "Concept per gli Europei 2024, locandine Padel Wars e Stile Libero e un post Instagram per il Maraduno di Napoli. Umorismo, giochi di parole e passione per il cinema attraversano la serie.",
+        "descriptionEn": "A Euro 2024 concept, Padel Wars and Stile Libero film posters, and an Instagram post for Naples’ Maraduno. Humour, wordplay and a love of cinema connect the series.",
+        "image": "/assets/portfolio/euro-2024.webp",
+        "alt": "Concept celebrativo per l’inizio degli Europei 2024 dell’Italia",
+        "source": "",
+        "credits": "Materiali personali forniti da Gianmarco Brandi.",
+        "creditsEn": "Personal assets supplied by Gianmarco Brandi.",
+        "verified": true,
+        "media": [
+          {
+            "type": "image",
+            "src": "/assets/portfolio/euro-2024.webp",
+            "small": "/assets/portfolio/euro-2024-800.webp",
+            "alt": "Concept celebrativo per l’inizio degli Europei 2024 dell’Italia",
+            "altEn": "Concept celebrativo per l’inizio degli Europei 2024 dell’Italia",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/padel-wars.webp",
+            "small": "/assets/portfolio/padel-wars-800.webp",
+            "alt": "Locandina cinematografica concept Padel Wars",
+            "altEn": "Locandina cinematografica concept Padel Wars",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/stile-libero.webp",
+            "small": "/assets/portfolio/stile-libero-800.webp",
+            "alt": "Locandina cinematografica concept Stile Libero",
+            "altEn": "Locandina cinematografica concept Stile Libero",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          },
+          {
+            "type": "image",
+            "src": "/assets/portfolio/maraduno.webp",
+            "small": "/assets/portfolio/maraduno-800.webp",
+            "alt": "Post Instagram per il Maraduno di Napoli",
+            "altEn": "Post Instagram per il Maraduno di Napoli",
+            "caption": "",
+            "captionEn": "",
+            "credits": "",
+            "poster": ""
+          }
+        ]
+      }
+    ]
   },
   "photos": {
     "hero": {
@@ -493,5 +1099,5 @@
     "legal.source": "REFERENCE JOB LISTING",
     "legal.studio": "EDITORIAL STUDIO"
   },
-  "portfolioEnabled": false
+  "portfolioEnabled": true
 }

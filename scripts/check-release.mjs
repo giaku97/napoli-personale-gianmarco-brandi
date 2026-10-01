@@ -14,8 +14,14 @@ if (!identity.email) failures.push('Verified public contact missing');
 if (!identity.cv) failures.push('Approved CV missing');
 if (!identity.projects.length) failures.push('Verified personal project evidence missing');
 for (const project of identity.projects) {
-  if (!project.verified || !project.role || !project.source || !project.alt) failures.push(`Unverified project: ${project.title}`);
-  if (project.image?.startsWith('/')) await access(`public${project.image}`).catch(() => failures.push(`Missing project image: ${project.title}`));
+  const media = project.media?.length ? project.media : project.image ? [{type:'image',src:project.image,alt:project.alt}] : [];
+  if (!project.verified || !project.role || !project.alt || !media.length) failures.push(`Incomplete project: ${project.title}`);
+  for (const item of media) {
+    if (!item.alt) failures.push(`Missing alternative text: ${project.title}`);
+    for (const file of [item.src,item.small,item.poster].filter(Boolean)) {
+      if (file.startsWith('/assets/')) await access(`public${file}`).catch(() => failures.push(`Missing project media: ${file}`));
+    }
+  }
 }
 if (identity.cv?.startsWith('/')) await access(`public${identity.cv}`).catch(() => failures.push('CV file missing'));
 console.log(JSON.stringify({ originalAssetIntegrity: 'checked', applicationReady: failures.length === 0, missing: failures }, null, 2));

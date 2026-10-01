@@ -8,11 +8,13 @@ import english from '@/content/locales/en.json';
 import { publicPath } from '@/lib/base-path';
 
 export type PhotoData = { src: string; alt: string; author: string; license: string; licenseUrl: string; source: string; position: number; visible: boolean };
-export type Project = { id: string; title: string; role: string; year: string; description: string; image: string; alt: string; source: string; credits: string; verified: boolean };
+export type ProjectMedia = { type: 'image' | 'video'; src: string; small?: string; alt: string; altEn?: string; caption: string; captionEn?: string; credits: string; poster: string };
+export type Project = { id: string; title: string; titleEn?: string; category?: 'commissioned' | 'agency' | 'concept' | 'archive'; role: string; roleEn?: string; year: string; description: string; descriptionEn?: string; image: string; alt: string; source: string; credits: string; creditsEn?: string; verified: boolean; media?: ProjectMedia[] };
 export type SiteData = Omit<typeof defaults, 'identity' | 'photos' | 'texts' | 'translations'> & { texts: Record<string,string>; translations: Record<string,string>; photos: Record<string,PhotoData>; identity: { name: string; logo: string; email: string; cv: string; portfolioUrl: string; projects: Project[] } };
 export const defaultSite = defaults as SiteData;
 export function safeLink(value: string) { return /^https:\/\/[^\s]+$/i.test(value) ? value : /^\/assets\/[a-z0-9_./-]+$/i.test(value) ? publicPath(value) : ''; }
 export function safeImage(value: string) { return /^\/assets\/[a-z0-9_./-]+$/i.test(value) ? publicPath(value) : /^data:image\/(png|jpeg|webp|gif);base64,[a-z0-9+/=]+$/i.test(value) ? value : ''; }
+export function safeVideo(value: string) { return /^\/assets\/[a-z0-9_./-]+\.mp4$/i.test(value) ? publicPath(value) : ''; }
 export function validateSite(input: unknown): SiteData {
   if (!input || typeof input !== 'object') throw new Error('Il file non contiene un progetto valido.');
   const s = input as SiteData;
@@ -29,7 +31,15 @@ export function validateSite(input: unknown): SiteData {
     if (!p || !safeImage(p.src) || !string(p.alt,500) || !string(p.author,200) || !string(p.license,200) || !Number.isFinite(p.position) || p.position < 0 || p.position > 100 || typeof p.visible !== 'boolean' || [p.source,p.licenseUrl].some(v=>typeof v !== 'string'||(v&&!safeLink(v)))) throw new Error('Controlla immagine, crediti e posizione delle fotografie.');
   }
   if (s.identity.projects.length > 30) throw new Error('Puoi inserire fino a 30 progetti.');
-  for (const p of s.identity.projects) if (!p || !string(p.id,100) || !string(p.title,200) || !string(p.role,500) || !string(p.year,50) || !string(p.description) || !string(p.alt,500) || !string(p.credits,1000) || typeof p.image !== 'string' || typeof p.source !== 'string' || typeof p.verified !== 'boolean' || (p.image && !safeImage(p.image)) || (p.source && !safeLink(p.source))) throw new Error('Controlla i campi dei lavori personali.');
+  for (const p of s.identity.projects) {
+    if (!p || !string(p.id,100) || !string(p.title,200) || !string(p.role,500) || !string(p.year,50) || !string(p.description) || !string(p.alt,500) || !string(p.credits,1000) || typeof p.image !== 'string' || typeof p.source !== 'string' || typeof p.verified !== 'boolean' || (p.image && !safeImage(p.image)) || (p.source && !safeLink(p.source))) throw new Error('Controlla i campi dei lavori personali.');
+    if ([p.titleEn,p.roleEn,p.descriptionEn,p.creditsEn].some(v=>v!==undefined && !string(v))) throw new Error('Controlla i testi inglesi dei lavori.');
+    if (p.category && !['commissioned','agency','concept','archive'].includes(p.category)) throw new Error('Categoria del lavoro non valida.');
+    if (p.media !== undefined) {
+      if (!Array.isArray(p.media) || p.media.length > 50) throw new Error('Troppi media in un lavoro.');
+      for (const m of p.media) if (!m || !['image','video'].includes(m.type) || !string(m.src,1000) || (m.small!==undefined && (!string(m.small,1000) || (m.small && !safeImage(m.small)))) || !string(m.alt,500) || !string(m.caption,500) || !string(m.credits,1000) || !string(m.poster,1000) || (m.altEn!==undefined && !string(m.altEn,500)) || (m.captionEn!==undefined && !string(m.captionEn,500)) || (m.type==='image' ? !safeImage(m.src) : !safeVideo(m.src)) || (m.poster && !safeImage(m.poster))) throw new Error('Controlla immagini e video del lavoro.');
+    }
+  }
   return structuredClone({ ...defaultSite, ...s, texts: { ...defaultSite.texts, ...s.texts }, translations: { ...defaultSite.translations, ...s.translations } });
 }
 

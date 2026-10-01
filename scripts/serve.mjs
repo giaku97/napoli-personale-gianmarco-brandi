@@ -4,11 +4,14 @@ import path from 'node:path';
 import { gzipSync } from 'node:zlib';
 
 const root = path.resolve('out');
-const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.woff2': 'font/woff2', '.txt': 'text/plain' };
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.mp4': 'video/mp4', '.woff2': 'font/woff2', '.txt': 'text/plain' };
 const server = createServer(async (req, res) => {
   try {
     const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
-    let target = path.resolve(root, '.' + pathname);
+    if (basePath && pathname !== basePath && !pathname.startsWith(basePath + '/')) { res.writeHead(404); return res.end('Not found'); }
+    const filePath = basePath ? pathname.slice(basePath.length) || '/' : pathname;
+    let target = path.resolve(root, '.' + filePath);
     if (target !== root && !target.startsWith(root + path.sep)) { res.writeHead(403); return res.end(); }
     if ((await stat(target)).isDirectory()) target = path.join(target, 'index.html');
     const body = await readFile(target);
